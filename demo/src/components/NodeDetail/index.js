@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, Form, Input } from 'antd';
+import ColorPicker from 'rc-color-picker';
+import 'rc-color-picker/assets/index.css';
+import { Card,Checkbox, Form, Input, InputNumber } from 'antd';
 import { withPropsAPI } from '@src';
 
 const { Item } = Form;
@@ -30,7 +32,7 @@ class NodeDetail extends React.Component {
       if (!item) {
         return;
       }
-
+      console.log(JSON.stringify(values));
       executeCommand(() => {
         update(item, {
           ...values,
@@ -43,20 +45,20 @@ class NodeDetail extends React.Component {
     const { form, propsAPI } = this.props;
     const { getFieldDecorator } = form;
     const { getSelected } = propsAPI;
-
+    
     const item = getSelected()[0];
 
     if (!item) {
       return null;
     }
 
-    const { label } = item.getModel();
-
-    return (
+    console.log(JSON.stringify(item.getModel()));
+    const { label, color } = item.getModel();
+    return (  
       <Card type="inner" title="节点属性" bordered={false}>
         <Form onSubmit={this.handleSubmit}>
           <Item
-            label="标签"
+            label="名称"
             {...inlineFormItemLayout}
           >
             {
@@ -65,6 +67,15 @@ class NodeDetail extends React.Component {
               })(<Input onBlur={this.handleSubmit} />)
             }
           </Item>
+          <div className="p">
+            颜色:
+            <ColorPicker 
+              animation="slide-up"
+              className="color-picker"
+              color={color}
+              onClose={this.handleSubmit}
+            />
+          </div>
         </Form>
       </Card>
     );

@@ -16,9 +16,9 @@ class FlowItemPanel extends React.Component {
               color: '#69C0FF',
               label: 'Bank',
               labelOffsetY: 28,
-              icon: 'https://gw.alipayobjects.com/zos/rmsportal/zByaCkBKPacvgJqFgtwy.svg',
+              icon: 'http://localhost:8080/files/yingyongrongqi-xietongshengchan-.svg',
             }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/NKmorGEesOtYawmMJkhi.svg"
+            src = "http://localhost:8080/files/yingyongrongqi-xietongshengchan-.svg"
           />
           <Item
             type="node"

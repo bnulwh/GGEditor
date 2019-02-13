@@ -10,44 +10,56 @@ class FlowItemPanel extends React.Component {
         <Card bordered={false}>
           <Item
             type="node"
-            size="72*72"
-            shape="flow-circle"
+            size = "65"
+            shape = "flow-custom-node"
             model={{
               color: '#FA8C16',
-              label: '起止节点',
+              label: '逻辑层',
+              labelOffsetY: 40,
+              icon: "http://localhost:8080/files/yingyongrongqi-xietongshengchan-.svg",
             }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/ZnPxbVjKYADMYxkTQXRi.svg"
+            src = "http://localhost:8080/files/yingyongrongqi-xietongshengchan-.svg"
           />
           <Item
-            type="node"
-            size="80*48"
-            shape="flow-rect"
-            model={{
-              color: '#1890FF',
-              label: '常规节点',
-            }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/wHcJakkCXDrUUlNkNzSy.svg"
+            type = "node"
+            size = "65"
+            shape = "flow-custom-node"
+            model = {{
+                color: '#1890FF',
+                label: '数据库',
+                labelOffsetY: 40,
+                icon: "http://localhost:8080/files/database.svg",
+              }}
+            src = "http://localhost:8080/files/database.svg" 
           />
           <Item
-            type="node"
-            size="80*72"
-            shape="flow-rhombus"
-            model={{
+          type = "node"
+          size = "65"
+          shape = "flow-custom-node"
+          model = {
+            {
               color: '#13C2C2',
-              label: '分叉节点',
-            }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/SnWIktArriZRWdGCnGfK.svg"
-          />
-          <Item
-            type="node"
-            size="80*48"
-            shape="flow-capsule"
-            model={{
+              label: '缓存层',
+              labelOffsetY: 40,
+              icon: "http://localhost:8080/files/redis.svg",
+            }
+          }
+          src = "http://localhost:8080/files/redis.svg" 
+            />
+          < Item
+          type = "node"
+          size = "65"
+          shape = "flow-custom-node"
+          model = {
+            {
               color: '#722ED1',
-              label: '模型节点',
-            }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/rQMUhHHSqwYsPwjXxcfP.svg"
-          />
+              label: '模型层',
+              labelOffsetY: 40,
+              icon: "http://localhost:8080/files/model.svg",
+            }
+          }
+          src = "http://localhost:8080/files/model.svg" 
+            />
         </Card>
       </ItemPanel>
     );

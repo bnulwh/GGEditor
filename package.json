@@ -36,9 +36,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaoli/GGEditor/issues"
+    "url": "https://github.com/bnulwh/GGEditor/issues"
   },
-  "homepage": "https://github.com/gaoli/GGEditor#readme",
+  "homepage": "https://github.com/bnulwh/GGEditor#readme",
   "peerDependencies": {
     "react": "^16.3.0"
   },
@@ -73,6 +73,7 @@
     "less-loader": "^4.1.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.5.0",
+    "rc-color-picker": "^1.2.6",
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",

@@ -6,6 +6,7 @@ import { FlowContextMenu } from '../../components/EditorContextMenu';
 import { FlowToolbar } from '../../components/EditorToolbar';
 import { FlowItemPanel } from '../../components/EditorItemPanel';
 import { FlowDetailPanel } from '../../components/EditorDetailPanel';
+import FlowCustomNode from './shape/nodes/FlowCustomNode'
 import styles from './index.less';
 
 class FlowPage extends React.Component {
@@ -28,13 +29,14 @@ class FlowPage extends React.Component {
             <FlowItemPanel />
           </Col>
           <Col span={16} className={styles.editorContent}>
-            {this.renderFlow()}
+            <Flow className = {styles.flow}/>
           </Col>
           <Col span={4} className={styles.editorSidebar}>
             <FlowDetailPanel />
             <EditorMinimap />
           </Col>
         </Row>
+        <FlowCustomNode />
         <FlowContextMenu />
       </GGEditor>
     );

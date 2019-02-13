@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Form, Input, Select } from 'antd';
+import { Card, Checkbox, Form, Input, InputNumber, Select } from 'antd';
 import { withPropsAPI } from '@src';
 
 const { Item } = Form;
@@ -61,13 +61,14 @@ class EdgeDetail extends React.Component {
       return null;
     }
 
+    console.log(JSON.stringify(item.getModel()));
     const { label = '', shape = 'flow-smooth' } = item.getModel();
 
     return (
       <Card type="inner" title="边线属性" bordered={false}>
         <Form onSubmit={this.handleSubmit}>
           <Item
-            label="标签"
+            label="名称"
             {...inlineFormItemLayout}
           >
             {
