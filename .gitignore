@@ -2,5 +2,5 @@ es
 cjs
 dist
 node_modules
-demos/dist
+demo/dist
 
