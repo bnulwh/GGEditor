@@ -45,7 +45,6 @@ class NodeDetail extends React.Component {
     const { form, propsAPI } = this.props;
     const { getFieldDecorator } = form;
     const { getSelected } = propsAPI;
-    
     const item = getSelected()[0];
 
     if (!item) {
@@ -54,7 +53,7 @@ class NodeDetail extends React.Component {
 
     console.log(JSON.stringify(item.getModel()));
     const { label, color } = item.getModel();
-    return (  
+    return (
       <Card type="inner" title="节点属性" bordered={false}>
         <Form onSubmit={this.handleSubmit}>
           <Item
@@ -69,7 +68,7 @@ class NodeDetail extends React.Component {
           </Item>
           <div className="p">
             颜色:
-            <ColorPicker 
+            <ColorPicker
               animation="slide-up"
               className="color-picker"
               color={color}

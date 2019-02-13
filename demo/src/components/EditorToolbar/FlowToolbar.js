@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tooltip, Divider } from 'antd';
 import { Toolbar, Command } from '@src';
+import ExportCommand from "./commands/ExportCommand";
 import styles from './index.less';
 import iconfont from '../../theme/iconfont.less';
 
@@ -82,6 +83,13 @@ class FlowToolbar extends React.Component {
             <i className={`${iconfont.iconfont} ${iconfont.iconUngroup}`} />
           </Tooltip>
         </Command>
+        <Divider type="vertical" />
+        <Command name="export">
+          <Tooltip title="导出" placement="bottom" overlayClassName={styles.tooltip}>
+            <i className={`${iconfont.iconfont} ${iconfont.iconUngroup}`} />
+          </Tooltip>
+        </Command>
+        <ExportCommand />
       </Toolbar>
     );
   }
