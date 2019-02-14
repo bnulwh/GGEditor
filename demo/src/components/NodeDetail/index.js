@@ -1,7 +1,7 @@
 import React from 'react';
-import ColorPicker from 'rc-color-picker';
-import 'rc-color-picker/assets/index.css';
-import { Card,Checkbox, Form, Input, InputNumber } from 'antd';
+// import ColorPicker from 'rc-color-picker';
+// import 'rc-color-picker/assets/index.css';
+import { Card, Form, Input } from 'antd';
 import { withPropsAPI } from '@src';
 
 const { Item } = Form;
@@ -52,7 +52,7 @@ class NodeDetail extends React.Component {
     }
 
     console.log(JSON.stringify(item.getModel()));
-    const { label, color } = item.getModel();
+    const { label } = item.getModel();
     return (
       <Card type="inner" title="节点属性" bordered={false}>
         <Form onSubmit={this.handleSubmit}>
@@ -66,15 +66,29 @@ class NodeDetail extends React.Component {
               })(<Input onBlur={this.handleSubmit} />)
             }
           </Item>
-          <div className="p">
-            颜色:
+          {/* <Item
+            label="颜色"
+            {...inlineFormItemLayout}
+          >
+            {
+              getFieldDecorator('label', {
+                initialValue: color,
+              })(<ColorPicker onChange={this.handleSubmit} />)
+            }
+          </Item>
+          <div>
+          颜色:
             <ColorPicker
               animation="slide-up"
-              className="color-picker"
               color={color}
-              onClose={this.handleSubmit}
-            />
-          </div>
+              className="color-picker"
+              onClose={ev =>{
+                this.handleSubmit({'color': ev.color});
+                }}
+              >
+              <span className="react-custom-trigger"> __  </span>
+            </ColorPicker>
+          </div> */}
         </Form>
       </Card>
     );

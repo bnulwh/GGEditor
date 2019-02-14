@@ -7,6 +7,12 @@ import { FlowToolbar } from '../../components/EditorToolbar';
 import { FlowItemPanel } from '../../components/EditorItemPanel';
 import { FlowDetailPanel } from '../../components/EditorDetailPanel';
 import FlowCustomNode from './shape/nodes/FlowCustomNode';
+import FlowCacheNode from './shape/nodes/FlowCacheNode';
+import FlowDatabaseNode from './shape/nodes/FlowDatabaseNode';
+import FlowIngressNode from './shape/nodes/FlowIngressNode';
+import FlowLogicNode from './shape/nodes/FlowLogicNode';
+import FlowModelNode from './shape/nodes/FlowModelNode';
+
 import styles from './index.less';
 import data from '../../mock/flow-data.json';
 
@@ -41,6 +47,11 @@ class FlowPage extends React.Component {
           </Col>
         </Row>
         <FlowCustomNode />
+        <FlowCacheNode />
+        <FlowDatabaseNode />
+        <FlowIngressNode />
+        <FlowLogicNode />
+        <FlowModelNode />
         <FlowContextMenu />
       </GGEditor>
     );

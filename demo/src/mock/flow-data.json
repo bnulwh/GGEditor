@@ -2,7 +2,7 @@
     "nodes": [{
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-logic-node",
         "color": "#FA8C16",
         "label": "逻辑层",
         "labelOffsetY": 40,
@@ -14,7 +14,7 @@
     }, {
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-database-node",
         "color": "#1890FF",
         "label": "数据库",
         "labelOffsetY": 40,
@@ -26,7 +26,7 @@
     }, {
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-cache-node",
         "color": "#13C2C2",
         "label": "缓存层",
         "labelOffsetY": 40,
@@ -38,7 +38,7 @@
     }, {
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-model-node",
         "color": "#722ED1",
         "label": "模型层",
         "labelOffsetY": 40,
@@ -51,7 +51,7 @@
     }, {
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-model-node",
         "color": "#722ED1",
         "label": "模型层",
         "labelOffsetY": 40,
@@ -64,7 +64,7 @@
     }, {
         "type": "node",
         "size": "65",
-        "shape": "flow-custom-node",
+        "shape": "flow-model-node",
         "color": "#722ED1",
         "label": "模型层",
         "labelOffsetY": 40,
