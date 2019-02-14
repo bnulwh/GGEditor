@@ -13,8 +13,14 @@ class ExportCommand extends React.Component {
       execute(editor) {
         const page = editor.getCurrentPage();
         const data = page.save();
-        console.log(JSON.stringify(data));
-        alert(JSON.stringify(data));
+        const { nodes, edges, groups } = data;
+
+        console.log(JSON.stringify(data, null, '\t'));
+        alert("data:" + JSON.stringify(data, null, '\t'));
+        alert("nodes:" + JSON.stringify(nodes, null, '\t'));
+        alert("edges:" + JSON.stringify(edges, null, '\t'));
+        alert("groups:" + JSON.stringify(groups, null, '\t'));
+        
       },
       // 反向命令
       back(/* editor */) {

@@ -13,8 +13,8 @@ import PropsAPIContext from '@common/context/PropsAPIContext';
 import PropsAPI from '@common/context/PropsAPIContext/propsAPI';
 
 class GGEditor extends React.Component {
-  static setTrackable(value) {
-    console.log('trackable:'+ value);
+  static setTrackable(/* value */) {
+    // console.log('trackable:'+ value);
     Global.set('trackable', false);
   }
 

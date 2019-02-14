@@ -8,11 +8,15 @@ import { FlowItemPanel } from '../../components/EditorItemPanel';
 import { FlowDetailPanel } from '../../components/EditorDetailPanel';
 import FlowCustomNode from './shape/nodes/FlowCustomNode';
 import styles from './index.less';
+import data from '../../mock/flow-data.json';
 
 class FlowPage extends React.Component {
   renderFlow() {
     return (
-      <Flow className={styles.flow} />
+      <Flow
+        data={data}
+        className={styles.flow}
+      />
     );
   }
 
@@ -29,7 +33,7 @@ class FlowPage extends React.Component {
             <FlowItemPanel />
           </Col>
           <Col span={16} className={styles.editorContent}>
-            <Flow className = {styles.flow}/>
+            {this.renderFlow()}
           </Col>
           <Col span={4} className={styles.editorSidebar}>
             <FlowDetailPanel />
